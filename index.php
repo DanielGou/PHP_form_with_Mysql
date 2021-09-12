@@ -14,6 +14,7 @@
 
 
 <body>
+    <a href="/cadastro.php">cadastros</a>
     <div class="wrapper">
         <h1>Projeto Formulário</h1>
         <h2>Novo cadastro</h2>

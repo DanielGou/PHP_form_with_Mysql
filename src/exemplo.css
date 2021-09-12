@@ -140,3 +140,10 @@ table, th, td {
     text-align: left;
     margin: 40vh auto;
 }
+
+a{
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    color: white;
+}

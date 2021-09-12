@@ -8,6 +8,7 @@
     <title>Cadatros</title>
 </head>
 <body>
+    <a href="/update.php">update</a>
     <table>
         <tr>
             <th>ID</th>

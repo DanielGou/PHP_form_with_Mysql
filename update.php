@@ -8,6 +8,7 @@
     <title>Update Cadatros</title>
 </head>
 <body>
+    <a href="/delete.php">deletar</a>
     <div class="wrapper">
         <h2>Alterar cadastro</h2>
         <form action="./MVC/updateCadastro.php" method="POST">
