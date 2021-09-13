@@ -9,14 +9,17 @@
 </head>
 <body>
     <a href="/update.php">update</a>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Mome</th>
-            <th>Telefone</th>
-            <th>Email</th>
-        </tr>
-        <?php include('./MVC/getCadastros.php')?>
-    </table>
+    <div class="wrapper">
+        <h2>Lista de Cadastros</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Mome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+            </tr>
+            <?php include('./MVC/getCadastros.php')?>
+        </table>
+    </div>
 </body>
 </html>
