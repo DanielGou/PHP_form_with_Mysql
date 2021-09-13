@@ -1,4 +1,4 @@
-USE form;
+USE ghtest;
 CREATE TABLE IF NOT EXISTS `pessoas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(80) COLLATE utf8_bin DEFAULT NULL,
