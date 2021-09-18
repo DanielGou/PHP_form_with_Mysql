@@ -11,7 +11,7 @@ class Conexao {
 	public static function getInstance() {
 
 		if (!isset(self::$instance)) {
-			self::$instance = new PDO('mysql:host=localhost;dbname=form', 'root', 'eu190290');
+			self::$instance = new PDO('mysql:host=localhost;dbname=ghtest', 'root', '');
 			self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			self::$instance->setAttribute(PDO::ATTR_ORACLE_NULLS, PDO::NULL_EMPTY_STRING);
 		}

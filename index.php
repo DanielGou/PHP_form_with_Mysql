@@ -18,7 +18,7 @@
     <div class="wrapper">
         <h1>Projeto Formulário</h1>
         <h2>Novo cadastro</h2>
-        <form action="./MVC/AddCadastro.php" method="POST">
+        <form action="./MVC/AddCadastro.php" method="POST" target="target">
             <input type="name" name="name" placeholder="Nome"/>
             <input type="phone" name="phone" placeholder="Telefone"/>
             <input type="email" name="email" placeholder="Email"/>
@@ -26,6 +26,8 @@
         </form>
         
     </div>
+
+    <iframe style="width: 100%;" name="target"></iframe>
 </body>
 
 </html>

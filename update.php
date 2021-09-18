@@ -11,7 +11,7 @@
     <a href="/delete.php">deletar</a>
     <div class="wrapper">
         <h2>Alterar cadastro</h2>
-        <form action="./MVC/updateCadastro.php" method="POST">
+        <form action="./MVC/updateCadastro.php" method="POST" target="target">
             <input type="id" name="id" placeholder="id"/>
             <input type="name" name="name" placeholder="Nome"/>
             <input type="phone" name="phone" placeholder="Telefone"/>
@@ -19,5 +19,7 @@
             <input id="btnSubmitForm" type="submit" value="Submit"/>
         </form>
     </div>
+
+    <iframe style="width: 100%;" name="target"></iframe>
 </body>
 </html>

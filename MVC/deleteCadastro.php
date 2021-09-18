@@ -17,7 +17,7 @@ $statement = $conexao->prepare($sql);
 if ($statement->execute([
         ':id' => $id,
 ])) {
-	echo 'publisher id ' . $id . ' was deleted successfully.';
+        echo  "<div style='color: lime; text-align: center;'>".'publisher id ' . $id . ' was deleted successfully.'."</div>";
 }
 
 ?>

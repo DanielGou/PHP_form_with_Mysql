@@ -16,12 +16,14 @@
 <body>
     <div class="wrapper">
         <h2>Deletar cadastro</h2>
-        <form action="./MVC/deleteCadastro.php" method="GET">
+        <form action="./MVC/deleteCadastro.php" method="GET" target="target">
             <input type="id" name="id" placeholder="id"/>
             <input id="btnSubmitForm" type="submit" value="Submit"/>
         </form>
         
     </div>
+
+    <iframe style="width: 100%;" name="target"></iframe>
 </body>
 
 </html>

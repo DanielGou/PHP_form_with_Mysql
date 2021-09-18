@@ -147,3 +147,7 @@ a{
     top: 5px;
     color: white;
 }
+
+iframe{
+    border: none;
+}

@@ -15,20 +15,20 @@ $email = $_POST["email"];
 
 
 if(!is_string($nome) || empty($nome)){
-	echo "Nome invalido";
+	echo "<div style='color: red; text-align: center;'>Nome invalido</div>";
 	return;
 }
 
 if(!filter_var($email, FILTER_VALIDATE_EMAIL) || empty($email)){
-	echo "Email invalido";
+	echo "<div style='color: red; text-align: center;'>Email invalido</div>";
 	return;
 
 }
 
 if (!preg_match('/^\([0-9]{2}\)?\s?[0-9]{4,5}[0-9]{4}$/', $phone) || empty($phone)){
-	echo "Telefone invalido";
+	echo "<div style='color: red; text-align: center;'>Telefone invalido</div>";
 	return;
-}
+} 
 
 $sql = 'update pessoas 
         set nome = :nome, email = :email, telefone = :telefone
@@ -42,7 +42,7 @@ if ($statement->execute([
 	':telefone' => $phone,
 	':email' => $email
 ])) {
-	echo 'The publisher has been updated successfully!';
+	echo "<div style='color: lime; text-align: center;'>The publisher has been updated successfully!</div>";
 }
 
 ?>

@@ -13,18 +13,18 @@ $email = $_POST["email"];
 //validar dados
 
 if(!is_string($nome) || empty($nome)){
-	echo "Nome invalido";
+	echo "<div style='color: red; text-align: center;'>Nome invalido</div>";
 	return;
 }
 
 if(!filter_var($email, FILTER_VALIDATE_EMAIL) || empty($email)){
-	echo "Email invalido";
+	echo "<div style='color: red; text-align: center;'>Email invalido</div>";
 	return;
 
 }
 
 if (!preg_match('/^\([0-9]{2}\)?\s?[0-9]{4,5}[0-9]{4}$/', $phone) || empty($phone)){
-	echo "Telefone invalido";
+	echo "<div style='color: red; text-align: center;'>Telefone invalido</div>";
 	return;
 }
 
@@ -42,7 +42,7 @@ $statement->execute([
 
 $publisher_id = $conexao->lastInsertId();
 
-echo 'O registro ' . $publisher_id . ' foi inserido';
+echo "<div style='color: lime; text-align: center;'>".'O registro ' . $publisher_id . ' foi inserido'."</div>";
 
 // desafio extra: fazer sistema que permite adicionar, ver uma lista de registros, editar e excluir
 ?>
