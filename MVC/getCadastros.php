@@ -16,10 +16,10 @@ $leads = $statement->fetchAll(PDO::FETCH_ASSOC);
 if ($leads) {
 	foreach ($leads as $lead) {
         echo "<tr>";
-        echo "<th>". $lead['id'] . "</th>";
-        echo "<th>". $lead['nome'] . "</th>";
-        echo "<th>". $lead['telefone'] . "</th>";
-        echo "<th>". $lead['email'] . "</th>";
+        echo "<td>". $lead['id'] . "</td>";
+        echo "<td>". $lead['nome'] . "</td>";
+        echo "<td>". $lead['telefone'] . "</td>";
+        echo "<td>". $lead['email'] . "</td>";
         echo "</tr>";
     }
 }

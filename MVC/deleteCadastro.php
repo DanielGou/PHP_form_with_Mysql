@@ -12,10 +12,11 @@ $sql = 'DELETE FROM pessoas
         WHERE id = :id';
 
 $statement = $conexao->prepare($sql);
-$statement->bindValue(':id', $id, PDO::PARAM_INT);
 
 // execute the statement
-if ($statement->execute()) {
+if ($statement->execute([
+        ':id' => $id,
+])) {
 	echo 'publisher id ' . $id . ' was deleted successfully.';
 }
 

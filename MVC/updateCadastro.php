@@ -12,18 +12,18 @@ $phone = $_POST["phone"];
 $email = $_POST["email"];
 
 
-$sql = "update pessoas set
-        nome = '".$nome."', email = '".$email."',telefone = '".$phone."'
-        where id = ".$id;
+$sql = 'update pessoas 
+        set nome = :nome, email = :email, telefone = :telefone
+        where id = :id';
 
 $statement = $conexao->prepare($sql);
 
-$statement->bindValue(':id', $id, PDO::PARAM_INT);
-$statement->bindValue(':nome', $nome);
-$statement->bindValue(':telefone', $phone);
-$statement->bindValue(':email', $email);
-
-if ($statement->execute()) {
+if ($statement->execute([
+        ':id' => $id,
+	':nome' => $nome,
+	':telefone' => $phone,
+	':email' => $email
+])) {
 	echo 'The publisher has been updated successfully!';
 }
 
