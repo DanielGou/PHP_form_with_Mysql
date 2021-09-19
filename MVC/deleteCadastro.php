@@ -8,6 +8,11 @@ $conexao = Conexao::getInstance();
 // pegar os nomes dos campos que você passou pela requsição
 $id = $_GET["id"];
 
+if(empty($id)){
+        echo "<div style='color: red; text-align: center;'>Id invalido</div>";
+        return;
+}
+
 $sql = 'DELETE FROM pessoas
         WHERE id = :id';
 

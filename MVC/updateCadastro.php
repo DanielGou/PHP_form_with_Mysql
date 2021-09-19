@@ -13,6 +13,10 @@ $email = $_POST["email"];
 
 //validando dados
 
+if(empty($id)){
+	echo "<div style='color: red; text-align: center;'>Id invalido</div>";
+	return;
+}
 
 if(!is_string($nome) || empty($nome)){
 	echo "<div style='color: red; text-align: center;'>Nome invalido</div>";
